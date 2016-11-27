@@ -30,60 +30,57 @@
 
     <div id="main">
         <nav>
-            <ul>
-                <li>
-                    <div class="urediProfil">
-                        <a class="active" href="#">Uredi profil</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="uporabniki">
-                        <a href="adminPageUporabniki.html">Uporabniki</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="dodajanjeGalerij">
-                        <a href="adminPageDodajanjeGalerij.html">Dodajanje galerij</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="urejanjeGalerij">
-                        <a href="adminPageUrejanjeGalerij.html">Urejanje galerij</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="log">
-                        <a href="adminPageLog.html">Log</a>
-                    </div>
-                </li>
-            </ul>
+            <a class="active" href="#">Uredi profil</a>
+            <a href="adminPageUporabniki.html">Uporabniki</a>
+            <a href="adminPageDodajanjeGalerij.html">Dodajanje galerij</a>
+            <a href="adminPageUrejanjeGalerij.html">Urejanje galerij</a>
+            <a href="adminPageLog.html">Log</a>
         </nav>
         <div class="podlaga">
             <div class="vsebinaProfil">
                 <form action="#vec" method="POST">
                     <div class="vrstica">
-                        <label for="potrdited">Za urejanje svojega profila, najprej vpiši svoje geslo:</label><br />
+                        <label >Za urejanje svojega profila, najprej vpiši svoje geslo:</label><br />
                         <input name="potrditev" required="required" placeholder="geslo" type="password" value="" size="28" /><br />
                         <input type="submit" value="Preverjanje"/>
                     </div>
                 </form>
 
                 <div id="vec" class="vec">
-                    <form action="#" method="PUT">
-                        <div class="vrstica">
-                            <label for="uprIme">Vpiši svoje novo uporabniško ime:</label><br />
-                            <input name="uprIme" type="text" placeholder="uporabniško ime" value="" size="28" /><br />
+                    <form>
+                        <div class="splosno">
+                            <div class="vrstica">
+                                <label>Vpiši svoje novo uporabniško ime:</label><br />
+                                <input name="uprIme" type="text" placeholder="uporabniško ime" value="" size="28" /><br />
+                            </div>
+                            <div class="vrstica">
+                                <label>Vpiši svoj nov e-mail:</label><br />
+                                <input name="email" type="email" placeholder="e-mail" value="" size="28" /><br />
+                            </div>
+                            <div class="vrstica">
+                                <label>Vpiši svoje novo geslo:</label><br />
+                                <input name="geslo" type="password" placeholder="geslo" value="" size="28" /><br />
+                            </div>
                         </div>
-                        <div class="vrstica">
-                            <label for="email">Vpiši svoj nov e-mail:</label><br />
-                            <input name="email" type="email" placeholder="e-mail" value="" size="28" /><br />
+                        
+                        <div class="slikanje">
+                            <label>Ponastavi sliko profila</label><br />
+                            <button id="zaZajem">Kamera</button>
+                            <input type="file" name="pic" accept="image/*">
+
+                            <noscript><p>Ne podpira zajema s kamero!</p></noscript>
+
+                            <div class="zajem" id="zajem">
+                                <video id="video" width="130" height="130" autoplay></video>
+                                <button id="snap">Slikaj</button>
+                                <canvas id="canvas" width="130" height="130">Ne bo šlo!</canvas>
+                            </div>
                         </div>
-                        <div class="vrstica">
-                            <label for="geslo">Vpiši svoje novo geslo:</label><br />
-                            <input name="geslo" type="password" placeholder="geslo" value="" size="28" /><br />
-                        </div>
+
                         <input type="submit" value="Shrani spremembe" />
                     </form>
+
+
                 </div>
                 
                 
@@ -94,9 +91,7 @@
 
     </div>
 
-    <video id="video" width="640" height="480" autoplay></video>
-    <button id="snap">Slikaj</button>
-    <canvas id="canvas" width="640" height="480"></canvas>
+    
 
 </body>
 </html>

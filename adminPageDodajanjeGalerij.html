@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/StyleAdminPage.css">
+    <script type="text/javascript" src="js/adminJS.js" async></script>
 </head>
 
 <body>
@@ -29,34 +30,24 @@
 
     <div id="main">
         <nav>
-            <ul>
-                <li>
-                    <div class="urediProfil">
-                        <a href="adminPageUrediProfil.html">Uredi profil</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="uporabniki">
-                        <a href="adminPageUporabniki.html">Uporabniki</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="dodajanjeGalerij">
-                        <a class="active" href="#">Dodajanje galerij</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="urejanjeGalerij">
-                        <a href="adminPageUrejanjeGalerij.html">Urejanje galerij</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="log">
-                        <a href="adminPageLog.html">Log</a>
-                    </div>
-                </li>
-            </ul>
+                <a href="adminPageUrediProfil.html">Uredi profil</a>
+                <a href="adminPageUporabniki.html">Uporabniki</a>
+                <a class="active" href="#">Dodajanje galerij</a>
+                <a href="adminPageUrejanjeGalerij.html">Urejanje galerij</a>
+                <a href="adminPageLog.html">Log</a>
         </nav>
+        <div class="podlaga">
+            <form class="box" method="post" enctype="multipart/form-data">
+                <div class="box__input">
+                    <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                    <!--<label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>-->
+                    <button class="box__button" type="submit">Naloži</button>
+                </div>
+                <div class="box__uploading">Uploading&hellip;</div>
+                <div class="box__success">Done!</div>
+                <div class="box__error">Error! <span></span>.</div>
+            </form>
+        </div>
     </div>
 
 

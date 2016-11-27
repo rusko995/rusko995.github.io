@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/StyleAdminPage.css">
+    <script type="text/javascript" src="js/adminLogJS.js" async></script>
 </head>
 
 <body>
@@ -29,37 +30,30 @@
 
     <div id="main">
         <nav>
-            <ul>
-                <li>
-                    <div class="urediProfil">
-                        <a href="adminPageUrediProfil.html">Uredi profil</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="uporabniki">
-                        <a href="adminPageUporabniki.html">Uporabniki</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="dodajanjeGalerij">
-                        <a href="adminPageDodajanjeGalerij.html">Dodajanje galerij</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="urejanjeGalerij">
-                        <a href="adminPageUrejanjeGalerij.html">Urejanje galerij</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="log">
-                        <a class="active" href="#">Log</a>
-                    </div>
-                </li>
-            </ul>
+            <a href="adminPageUrediProfil.html">Uredi profil</a>
+            <a href="adminPageUporabniki.html">Uporabniki</a>
+            <a href="adminPageDodajanjeGalerij.html">Dodajanje galerij</a>
+            <a href="adminPageUrejanjeGalerij.html">Urejanje galerij</a>
+            <a class="active" href="#">Log</a>
         </nav>
+        <div class="podlaga">
+            <div class="logging">
+                <button id="log">Poizvedi, kaj se je dogajalo!</button>
+                <noscript>V primeru, da nimaš vključenega javaScripta ali pa si na Explorerju, ne bo delovalo.</noscript>
+                <ul id="myList">
+                </ul>
+            </div>
+        </div>
+
+
     </div>
 
-
+    <!--type="button" onclick="izpisiLog()"
+        <div id="demo">
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    -->
+    
 
 </body>
 </html>
