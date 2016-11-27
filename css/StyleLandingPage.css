@@ -169,7 +169,7 @@ header ul.topnav li a {
 }
 .pop-telo {
     padding: 2px 16px;
-    background-color: #4e4e4e;
+    background-color: #808080;
 }
 .pop-telo form{
     max-width:100%;
@@ -186,7 +186,6 @@ header ul.topnav li a {
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-    z-index:6;
     position: fixed;    /* ostane na mestu */
     z-index: 10;        
     padding-top: 300px; /* lokacija od vrha */

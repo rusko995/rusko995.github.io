@@ -2,7 +2,6 @@
 margin: 0px;
 padding: 0px;
 }
-
 body {
     background-color: #000000;
 }
@@ -35,7 +34,6 @@ header {
     float: left;
     margin-top:30px;
 }
-
 .headerSocialLinks li a {
     display: block;
     float: left;
@@ -65,20 +63,22 @@ header {
 .logout a:hover {
     background-color: #3762bc; 
 }
-
 #main {
     width:100%;
-    margin-left:40px;
+    display:flex;
+	flex-flow:row;
+
 }
 #main ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 230px;
-    background-color: #00adef;
-    border: 1px solid #555;
+    margin-left:40px;
 }
 #main li a {
+    border: 1px solid #555;
+    background-color: #00adef;
     display: block;
     color: #000;
     padding: 30px 30px;
@@ -87,19 +87,38 @@ header {
     font-size:20px;
     font-weight: bold;
     border-bottom: 1px solid #555;
-}
-#main li:last-child {
-    border-bottom: none;
+    border-radius: 13px;
 }
 #main li a.active {
     background-color: #3762bc;
     color: black;
 }
 #main li a:hover:not(.active) {
-    background-color: #555;
-    color: black;
+    background-color: #808080;
 }
-
+#main .podlaga{
+    margin-left:40px;
+    width:60%;
+    background-color:#808080;
+    border-radius: 13px;
+}
+.vsebinaProfil{
+    width:90%;
+    margin:20px auto;
+}
+.vec {
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    margin-top:30px;
+}
+.vec:target {
+    visibility: visible;
+    opacity: 1;
+}
+form .vrstica{
+    margin-bottom:7px;
+}
 
 @media only screen and (max-width: 960px) and (min-width:480px) {
     header {
